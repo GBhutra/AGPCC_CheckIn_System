@@ -321,7 +321,7 @@ html .navbar-default .navbar-nav > .active > a, html .navbar-default .navbar-nav
 
 
 .sport01:before {
-	content: "​O​​";
+	content: "O";
 	display: block;
 	font-family: "4yeosportregular";
 	font-size: 66px;
@@ -1696,10 +1696,6 @@ html .navbar-default .navbar-nav > .active > a, html .navbar-default .navbar-nav
 	padding: 5px;
 	position: absolute;
 	top: -10px;
- -webkit- transform: rotate(0deg) scale(1.01) skew(-17deg) translate(0px);
- -moz- transform: rotate(0deg) scale(1.01) skew(-17deg) translate(0px);
-	-ms-transform: rotate(0deg) scale(1.01) skew(-17deg) translate(0px);
-	transform: rotate(0deg) scale(1.01) skew(-17deg) translate(0px);
 	width: 15px;
 	z-index: 999;
 }
@@ -1713,10 +1709,6 @@ html .navbar-default .navbar-nav > .active > a, html .navbar-default .navbar-nav
 	padding: 5px;
 	position: absolute;
 	top: -10px;
- -webkit- transform: rotate(0deg) scale(1.01) skew(-17deg) translate(0px);
- -moz- transform: rotate(0deg) scale(1.01) skew(-17deg) translate(0px);
-	-ms-transform: rotate(0deg) scale(1.01) skew(-17deg) translate(0px);
-	transform: rotate(0deg) scale(1.01) skew(-17deg) translate(0px);
 	width: 15px;
 	z-index: 999;
 }
