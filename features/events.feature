@@ -42,10 +42,11 @@ Scenario: Updating an event
   And I fill in "title" with "fakeevent2"
   And I fill in "description" with "fakedescription2"
   And I fill in "venue" with "fakelocation2"
-  And I fill in "date" with "01-Jan-2002"
+ 
   And I fill in "start_time" with "11"
   And I fill in "end_time" with "12"
   And I fill in "ticket_price" with "free"
+   And I fill in "date" with "01-Jan-2002"
   And I press "save changes"
   Then I should see updated title "fakeevent2"
   And I should see updated description "fakedescription2"
