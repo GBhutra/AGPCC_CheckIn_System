@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+
   get 'events/index'
+
 
   get 'events/show'
 
@@ -8,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'logins/index'
   
-  root 'events#index'
+root 'events#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -14,12 +14,16 @@ module NavigationHelpers
     case page_name
 
     when /^the home\s?page$/
-      '/dashboards/index'
-   
-    when /^Create events$/
+      '/admin'
+      
+   when /^Events$/
+     '/admin/events'
+    
+    when /^New events$/
      '/admin/events/new'
      
-     
+    when /^Edit events$/
+     '/admin/events/index'
      
      
     # Add more mappings here.
