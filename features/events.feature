@@ -8,7 +8,7 @@ Background: events have been added to database
   
 Given the following events exist:
   
-  | title                   | description   | venue             | date         | start_time | end_time  | ticket_price | 
+  | title                   | description   | venue             | date         | start_time | end_time  | ticket_price |
   | First Event             | firstevent    | firstlocation     | 25-Nov-2014  | 1          | 2         | free         |
   | Second Event            | secondevent   | secondlocation    | 26-Oct-2015  | 3          | 4         | 5            |
   | Third Event             | thirdevent    | thirdlocation     | 21-Jul-2016  | 6          | 7         | free         |

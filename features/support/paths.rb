@@ -19,10 +19,10 @@ module NavigationHelpers
    when /^Events$/
      '/admin/events'
     
-    when /^New events$/
+    when /^New Events$/
      '/admin/events/new'
      
-    when /^Edit events$/
+    when /^Edit Eventss$/
      '/admin/events/index'
      
      
