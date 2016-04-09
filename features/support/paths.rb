@@ -30,6 +30,9 @@ module NavigationHelpers
     
     when /^Third Event/
       "events/300"
+      
+    when /^Edit Event/
+      '100/edit'
     
    
      

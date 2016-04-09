@@ -65,28 +65,23 @@ Scenario: create new event
   And I press "Create Event"
   Then I should get the message Event was successfully created
   
-Scenario: Updating an event
-  When I am on Login page
-  And I login
+  Scenario: Updating an Event
+  When I login successfully
+  Then I should be on Dashboard
+  When I follow Events
+  Then I should be on Events
   When I follow First Event
   And I follow Edit Event
-  And I fill in "Title" with "fakeevent2"
-  And I fill in "Description" with "fakedescription2"
-  And I fill in "Venue" with "fakelocation2"
-  And I fill in "Date" with "01-Jan-2002"
-  And I fill in "Start Time" with "11"
-  And I fill in "End Time" with "12"
-  And I fill in "Ticket Price" with "free"
+  Then I should be on Edit Event
+  When I fill in description with fakedescription2
+  And I fill in venue with fakelocation2
+  And I fill in start_time with 11
+  And I fill in end_time with 12
+  And I fill in ticket_price with 13
+  And I select in date(1i) with 2016
+  And I select in date(2i) with January
+  And I select in date(3i) with 18
   And I press "Update Event"
-  Then I should see updated title "fakeevent2"
-  And I should see updated description "fakedescription2"
-  And I should see updated venue "fakelocation2"
-  And I should see updated date "01-Jan-2002"
-  And I should see updated start_time "11"
-  And I should see updated end_time "12"
-  And I should see updated ticket_price "free"
-  
-  
- 
-  
+  Then I should get the message Event was successfully updated
+
   
