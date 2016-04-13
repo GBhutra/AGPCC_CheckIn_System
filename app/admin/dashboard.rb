@@ -13,7 +13,6 @@ ActiveAdmin.register_page "Dashboard" do
               link_to event.title,[:admin,event]
             end
             column :venue
-            column :date
             column :start_time
             column :end_time
             column :ticket_price

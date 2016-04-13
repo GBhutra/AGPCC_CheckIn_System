@@ -10,7 +10,7 @@ class Event < ActiveRecord::Base
     geocoded_by :venue
     after_validation :geocode
     
-    scope :past_events,->{ where('date < ?', Date.today) }
-    scope :future_events,->{ where('date > ?', Date.today) }
+    scope :past_events,->{ where('end_time < ?', DateTime.now) }
+    scope :future_events,->{ where('start_time > ?', DateTime.now) }
     #scope :ongoing_events,->{ where('date == ?', Date.today) }
 end
