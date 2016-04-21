@@ -14,8 +14,8 @@ module NavigationHelpers
     case page_name
 
     when /^the home\s?page$/
-      '/admin/login'
-   
+      '/'
+ 
     when /^Events/
      'admin/events'
   
@@ -33,14 +33,19 @@ module NavigationHelpers
       
     when /^Edit Event/
       '100/edit'
-# added later                                 # This needs to change
-#    when /^Online Checkin/
-#      '/#'
-#    when /Checkin/
-#      '/check_in/1/new'
       
-#    when /RSVP/
-#     '/rsvp/2/new'      
+      
+# added later                                 # This needs to change
+#   when /^Online Checkin/
+ #     '/#'
+ 
+  
+      
+    when /^Check In/
+      '/check_in/100/new'
+      
+#    when /^RSVP/
+#     '/rsvp/200/new'      
    
      
      
