@@ -115,10 +115,18 @@ Scenario: Check In
   Then I should get the message Check in Successful
   
   
-#Scenario: RSVP
-#  When I press CheckIn
-#  Then I should be on Future Event
-#  When I press rsvp
-#  And I fill in email with admin@example.com
-#  And I press rsvp
-#  Then I should get the message Check in Successful
+  Scenario: RSVP
+  When I am on Xpage page
+  And I follow R.S.V.P.
+  Then I should be on Welcome to Aggie Graduate & Professional Community Club!
+  When I fill in member[email] with exg2@exg2.com
+  And I press "R.S.V.P"
+  Then I should be on Looks like you are signing in for the first time.
+  When I fill in member[first_name] with exga2
+  And I fill in member[last_name] with exgb2
+  And I fill in member[email] with exg2@exg2.com
+  And I fill in member[gender] with female
+  And I fill in member[classification] with graduate
+  And I press "RSVP"
+  Then I should get the message Thank you for RSVPing!
+

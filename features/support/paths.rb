@@ -44,8 +44,8 @@ module NavigationHelpers
     when /^Check In/
       '/check_in/100/new'
       
-#    when /^RSVP/
-#     '/rsvp/200/new'      
+    when /^R.S.V.P./
+     '/rsvp/200/new'      
    
      
      
