@@ -8,10 +8,10 @@ Background: events have been added to database
   
 Given the following events exist:
   
-  | title                   | description   | venue             | longitude | latitude | start_time      | end_time     | ticket_price | id  | 
-  | First Event             | firstevent    | firstlocation     |-90.0000000|20.0000000| 2017-April-11-10-00    |2017-April-11-11-00  |free          | 100 |
-  | Second Event            | secondevent   | secondlocation    | 30.0000000|40.0000000|2017-April-12-10-00     |2017-April-12-11-00  | 5            | 200  |
-  | Third Event             | thirdevent    | thirdlocation     |-15.0000000|25.0000000|2017-April-13-10-00     |2017-April-13-11-00  | free         | 300  |
+  | title                   | description   | venue             | start_time      | end_time     | id  | 
+  | First Event             | firstevent    | firstlocation     | 2017-April-11-10-00    |2017-April-11-11-00  | 100 |
+  | Second Event            | secondevent   | secondlocation    |2017-April-12-10-00     |2017-April-12-11-00  | 200  |
+  | Third Event             | thirdevent    | thirdlocation     |2017-April-13-10-00     |2017-April-13-11-00  | 300  |
 
   
 Scenario: viewing First Event Details
