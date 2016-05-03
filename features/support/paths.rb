@@ -35,10 +35,14 @@ module NavigationHelpers
       '100/edit'
       
     when /^Check In/
-      'check_in/200/new'
+      'check_in/100/new'
       
     when /^R.S.V.P./
-      'rsvp/100/new'
+      'rsvp/200/new'
+    
+    when /^AGPCC Admin Login/
+      'admin/login'
+      
 # added later                                 # This needs to change
 #    when /^Online Checkin/
 #      '/#'

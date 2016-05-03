@@ -88,34 +88,13 @@ When /^I fill in (.+) with (.+)$/ do |field, value|
   fill_in(field, :with => value)
 end
 
-
-def create_visitor
-@visitor ||= { :email => "admin@example.com",
-:password => "password", :password_confirmation => "password" }
-end
-
-def sign_in
-visit admin_root_path                                       #earlier: visit
-fill_in("admin_user[email]", :with => "admin@example.com")
-fill_in("admin_user[password]", :with => "password")
-click_button("Login")                       
-end
-
-def create_user
-create_visitor
-delete_user
-@user = AdminUser.create(@visitor)                           #try with User.new
-end
-
-def delete_user
-@user ||= AdminUser.where(:email => @visitor[:email]).first
-@user.destroy unless @user.nil?
-end
-
 When /^I login successfully$/ do
-  create_visitor
-  create_user
-  sign_in
+  @visitor ||= { :email => "admin@example.com", :password => "password", :password_confirmation => "password" }
+  AdminUser.create(@visitor)
+  visit path_to("AGPCC Admin Login")
+  fill_in("admin_user[email]", :with => "admin@example.com")
+  fill_in("admin_user[password]", :with => "password")
+  click_button("Login")
 end
 
 When /^I am on (.+) page$/ do |page|
@@ -146,5 +125,5 @@ Then /^I should get the message (.+)$/ do |msg|
 end
 
 When /^I select in (.+) with (.+)$/ do |field,value|
-  page.select(value, :from => "event[#{field}]")
+  page.select(value, :from => field)
 end

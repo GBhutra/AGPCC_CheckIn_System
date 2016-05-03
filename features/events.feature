@@ -8,10 +8,10 @@ Background: events have been added to database
   
 Given the following events exist:
   
-  | title                   | description   | venue             | start_time      | end_time     | id  | 
-  | First Event             | firstevent    | firstlocation     | 2017-April-11-10-00    |2017-April-11-11-00  | 100 |
-  | Second Event            | secondevent   | secondlocation    |2017-April-12-10-00     |2017-April-12-11-00  | 200  |
-  | Third Event             | thirdevent    | thirdlocation     |2017-April-13-10-00     |2017-April-13-11-00  | 300  |
+  | title                   | description   | venue                        | start_time                      | end_time                      | id  | 
+  | First Event             | firstevent    | HRBB, College Station, TX    | 2016-04-11T10:00:00.000-0500    | 2017-05-12T10:00:00.000-0500  | 100 |
+  | Second Event            | secondevent   | HRBB, College Station, TX    | 2017-05-13T10:00:00.000-0500    | 2017-05-14T10:00:00.000-0500  | 200  |
+  | Third Event             | thirdevent    | HRBB, College Station, TX    | 2017-05-15T10:00:00.000-0500    | 2017-05-16T10:00:00.000-0500  | 300  |
 
   
 Scenario: viewing First Event Details
@@ -110,18 +110,18 @@ Scenario: RSVP
   When I fill in member[first_name] with Aman
   And I fill in member[last_name] with Bhal
   And I fill in member[email] with aman@gmail.com
-  And I fill in member[gender] with Male
-  And I fill in member[classification] with Masters
-  And I press "RSVP"
+  And I select in member[gender] with Male
+  And I select in member[classification] with Master
+  And I press "R.S.V.P"
   Then I should get the message Thank you for RSVPing!
    When I am on R.S.V.P. page
    And I fill in member[email] with aman@gmail.com
    And I press "R.S.V.P"
-   Then I should get the message Thank you for RSVPing!
+   Then I should get the message Already RSVPed !!
   
 Scenario: CheckIn
   When I am on Check In page
-  And I fill in member[email] with amandeep@gmail.com
+  And I fill in member[email] with aman@gmail.com
   And I press "Check In"
   Then I should be on Looks like you are checking in for the first time
   When I fill in member[first_name] with Amandeep
