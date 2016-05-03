@@ -57,20 +57,8 @@ Scenario: create new event
   When I fill in event[title] with Event_One
   And I fill in event[description] with fakedescription
   And I fill in event[venue] with fakelocation
-  And I fill in event[longitude] with -90.0000000
-  And I fill in event[latitude] with 20.0000000
-  And I select in start_time(1i) with 2017
-  And I select in start_time(2i) with April
-  And I select in start_time(3i) with 10
-  And I select in start_time(4i) with 10
-  And I select in start_time(5i) with 00
-  And I select in end_time(1i) with 2017
-  And I select in end_time(2i) with April
-  And I select in end_time(3i) with 10
-  And I select in end_time(4i) with 11
-  And I select in end_time(5i) with 00
-  And I fill in event[ticket_price] with 10
-   And I press "Create Event"
+  And 
+  And I press "Create Event"
   Then I should get the message Event was successfully created
   
 Scenario: Updating an Event
