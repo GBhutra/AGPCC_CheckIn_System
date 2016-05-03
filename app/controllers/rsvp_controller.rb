@@ -64,4 +64,8 @@ class RsvpController < ApplicationController
     params.require(:member).permit(:first_name, :last_name, :email, :gender, :classification)
   end
   
+  def valid_email?(email)
+    email =~ /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  end
+  
 end

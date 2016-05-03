@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AGPCC Check-In System</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+
+</head>
+<body>
+    <nav class="navbar yamm navbar-default navbar-static-top center">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                  </button>
+                  <a class="navbar-brand" href="#">AGPCC</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://www.agpcc.club/">HOME</a></li>
+                    <li><a href="http://www.agpcc.club/o/aboutus.html">ABOUT US</a></li> 
+                    <li><a href="http://www.agpcc.club/o/gallery.html">PHOTO STREAM</a></li> 
+                    <li><a href="http://www.agpcc.club/o/sponsors.html">SPONSORS</a></li>
+                    <li><a href="http://www.agpcc.club/o/leadership.html">LEADERSHIP TEAM</a></li>
+                    <li><a href="https://secure.touchnet.com/C21490_ustores/web/store_main.jsp?STOREID=467">JOIN US</a></li>
+                    <li class="active"><a href="#">ONLINE CHECKIN</a></li>
+                    <li><%= link_to "Admin Login", admin_root_path %></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="pad-adjust">
+<%= yield %>
+</div>
+<footer class="pad-adjust">
+    <center><h5> &copy; ALl Rights Reserved 2016. AGPCC.CLUB</h5></center>
+</footer>
+</body>
+</html>
