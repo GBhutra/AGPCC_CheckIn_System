@@ -8,6 +8,7 @@ Background: events have been added to database
   
 Given the following events exist:
   
+
   | title                   | description   | venue                        | start_time                      | end_time                      | id  | 
   | First Event             | firstevent    | HRBB, College Station, TX    | 2016-04-11T10:00:00.000-0500    | 2017-05-12T10:00:00.000-0500  | 100 |
   | Second Event            | secondevent   | HRBB, College Station, TX    | 2017-05-13T10:00:00.000-0500    | 2017-05-14T10:00:00.000-0500  | 200  |

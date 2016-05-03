@@ -42,7 +42,6 @@ module NavigationHelpers
     
     when /^AGPCC Admin Login/
       'admin/login'
-      
 # added later                                 # This needs to change
 #    when /^Online Checkin/
 #      '/#'
