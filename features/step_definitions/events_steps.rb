@@ -95,7 +95,7 @@ def create_visitor
 end
 
 def sign_in
-visit admin_root_path                                       #earlier: visit
+visit 'admin/login'                                    #earlier: visit
 fill_in("admin_user[email]", :with => "admin@example.com")
 fill_in("admin_user[password]", :with => "password")
 click_button("Login")                       

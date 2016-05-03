@@ -9,9 +9,9 @@ Background: events have been added to database
 Given the following events exist:
   
   | title                   | description   | venue             | start_time      | end_time     | id  | 
-  | First Event             | firstevent    | firstlocation     | 2017-April-11-10-00    |2017-April-11-11-00  | 100 |
-  | Second Event            | secondevent   | secondlocation    |2017-April-12-10-00     |2017-April-12-11-00  | 200  |
-  | Third Event             | thirdevent    | thirdlocation     |2017-April-13-10-00     |2017-April-13-11-00  | 300  |
+  | First Event             | firstevent    | firstlocation     |April 11, 2016 10:00    |April 21, 2016 10:00  | 100 |
+  | Second Event            | secondevent   | secondlocation    |April 21, 2016 10:00     |April 11, 2017 10:00  | 200  |
+  | Third Event             | thirdevent    | thirdlocation     |May 11, 2016 10:00     |April 11, 2017 10:00  | 300  |
 
   
 Scenario: viewing First Event Details

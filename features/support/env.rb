@@ -4,9 +4,6 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 
-require 'simplecov'
-SimpleCov.start 'rails'
-
 require 'cucumber/rails'
 
 # Capybara defaults to CSS3 selectors rather than XPath.
@@ -48,13 +45,11 @@ end
 #     # this setting.
 #     DatabaseCleaner.strategy = :truncation
 #   end
-
 #
 #   Before('~@no-txn', '~@selenium', '~@culerity', '~@celerity', '~@javascript') do
 #     DatabaseCleaner.strategy = :transaction
 #   end
 #
-
 
 # Possible values are :truncation and :transaction
 # The :transaction strategy is faster, but might give you threading problems.

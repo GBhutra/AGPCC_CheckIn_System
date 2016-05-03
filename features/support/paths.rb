@@ -39,6 +39,9 @@ module NavigationHelpers
       
     when /^R.S.V.P./
       'rsvp/100/new'
+      
+    when /^AdminLogin/
+      'admin/login'
 # added later                                 # This needs to change
 #    when /^Online Checkin/
 #      '/#'
