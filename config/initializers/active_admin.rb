@@ -5,7 +5,14 @@ ActiveAdmin.setup do |config|
   # for each of the active admin pages.
   #
   config.site_title = "AGPCC Admin"
-
+  config.comments = false
+  config.namespace :admin do |admin|
+    admin.build_menu do |menu|
+      menu.add :label => 'Add Ons' do |submenu|
+        submenu.add :label => 'Analyze Data', :url => '/analyze/index'
+      end
+    end
+  end
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #

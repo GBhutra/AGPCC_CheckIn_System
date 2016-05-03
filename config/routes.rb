@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'analyze/index'
+
   get 'rsvp/:id/new' => 'rsvp#new'
   get 'rsvp/:id/new_with_new_member' => 'rsvp#new_with_new_member'
   
@@ -12,6 +14,11 @@ Rails.application.routes.draw do
   post 'check_in/:id/create' => 'check_in#create'
   post 'check_in/:id/create_with_new_member' => 'check_in#create_with_new_member'
   
+  get '/admin/events/new' => 'events#new'
+  post 'event/create' => 'events#create'
+  
+  get '/admin/events/:id/edit' => 'events#edit'
+  post '/admin/events/:id' => 'events#update'
 
   get 'events/index'
   get 'events/show'

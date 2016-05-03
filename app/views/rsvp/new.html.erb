@@ -1,5 +1,24 @@
-<h1>This is the R.S.V.P. page for <%= @event.title %></h1>
-<%= form_tag(:action => 'create' , :id => @event.id) do %>
-  <%= email_field(:member, :email) %>
-  <%= submit_tag ("Check In") %>
-<% end %>
+<div class="container">
+  <h2 class="section-subheading">R.S.V.P</h2>
+    <div class="jumbotron">
+  <h1><%= @event.title %></h1>
+  <h3>on <%= @event.start_time.to_formatted_s(:long_ordinal) %>  at <%= @event.venue %> </h3>
+  <h4> <%= @event.description %></h4>
+    </div>
+
+  <h4> Welcome to Aggie Graduate &amp; Professional Community Club! </h4>
+  <div class="form-box">
+  
+   <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+  
+    <%= form_tag(:action => 'create' , :method => 'POST', :id => @event.id, :class => 'form-group') do %>
+    <h1>Please enter your email id to R.S.V.P. :</h1>
+    <%= email_field(:member, :email, :class=> 'form-control input-lg') %>
+    <br>
+    <%= submit_tag "R.S.V.P", :class => "btn btn-lg btn-warning"  %>
+    <br>
+    <% end %>
+  </div>
+</div>

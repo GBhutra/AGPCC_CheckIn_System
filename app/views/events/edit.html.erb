@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Edit Event</h1>
+  <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+  <div class="form-box">
+  <%= form_for(:event, :url => {:action => 'update' ,:method => 'post', :controller => 'events', :class => 'form-group'}) do |f| %>  
+    <h4> Event Title :</h4>
+    <%= f.text_field :title, :class=> 'form-control' %>
+    <h4> Event Description :</h4>
+    <%= f.text_area :description, :class=> 'form-control' %>
+    <h4> Venue :</h4>
+    <%= f.text_field :venue, :class=> 'form-control', :id=> 'pac-input', :place_holder=> 'Enter Location' %>
+    <br><br>
+    <body><div id="map"></div></body>
+    <br><br>
+    <h4> Start Time :</h4>
+    <div class='input-group date' id='datetimepicker6' data-date-format="yyyy-mm-dd">
+      <%= f.datetime_field :start_time, :class=> 'form-control' %>
+      <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+      </span>
+    </div>
+    
+    <h4> End Time :</h4>
+    <div class='input-group date' id='datetimepicker7' data-date-format="yyyy-mm-dd">
+    <%= f.datetime_field :end_time, :class=> 'form-control' %>
+      <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+      </span>
+    </div>
+    <br><br>
+    <%= submit_tag "Update", :class => "btn btn-lg btn-warning"  %>
+  <% end %>
+  </div>
+</div>
+
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlZJtoLux_7E8pIZyJXSZ1lhGZ_2u4pk4&libraries=places&callback=initMap" async defer></script>

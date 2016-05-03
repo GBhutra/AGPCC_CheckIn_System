@@ -8,9 +8,66 @@
 // $sidebar-width: 242px;
 
 // Active Admin's got SASS!
+//@import "active_admin/mixins";
+//@import "active_admin/base";
+
+//active_admin.css.scss
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 @import "active_admin/mixins";
 @import "active_admin/base";
 
+html {
+  background: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+}
+body.active_admin {
+  background: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 80px;
+}
+#header {
+    background: #390000;
+    border: none;
+    text-shadow: none;
+    height: 50px;
+    padding: 0;
+    
+
+ul.tabs {
+    font-family: 'Roboto', sans-serif;
+	color: #FFFFFF;
+	font-size: 14px;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in-out 0s;
+}
+ul.tabs > li:hover > a, ul.tabs > li.current > a {
+    @include rounded(0);
+    margin: -10px 0;
+    background-color: #ffffff;
+	border: none;
+	font-family: 'Roboto', sans-serif;
+	color: #460000;
+	font-size: 14px;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in-out 0s;
+}
+a, a:link{
+    color: #FFFFFF;
+}
+}
+
+#title_bar {
+  background: #FFFFFF;
+  text-shadow: none;
+  border: none;
+  padding: 15px 30px;
+  @include no-shadow();
+  margin: 0
+}
+
+
+// Active Bootstrap
+//@import "active_bootstrap_skin";
 // Overriding any non-variable SASS must be done after the fact.
 // For example, to change the default status-tag color:
 //

@@ -1,31 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>AGPCC Check-In System</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-    <nav class="navbar yamm navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">AGPCC</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a href="http://www.agpcc.club/">HOME</a></li>
-                <li><a href="http://www.agpcc.club/o/aboutus.html">ABOUT US</a></li> 
-                <li><a href="http://www.agpcc.club/o/gallery.html">PHOTO STREAM</a></li> 
-                <li><a href="http://www.agpcc.club/o/sponsors.html">SPONSORS</a></li>
-                <li><a href="http://www.agpcc.club/o/leadership.html">LEADERSHIP TEAM</a></li>
-                <li><a href="https://secure.touchnet.com/C21490_ustores/web/store_main.jsp?STOREID=467">JOIN US</a></li>
-                <li class="active"><a href="#">ONLINE CHECKIN</a></li>
-                <li><%= link_to "Admin Login", admin_root_path %></li>
-            </ul>
-        </div>
-    </nav>
-<div class="pad-adjust">
-<%= yield %>
-</div>
-</body>
-</html>
+<% if controller_name == "events" && action_name == "edit" %>
+    <%= render partial: "partials/admin" %>
+<% elsif current_page?("/admin/events/new") || current_page?("/analyze/index") %>
+  <%= render partial: "partials/admin" %>
+<% else %>
+  <%= render partial: "partials/general" %>
+<% end %>

@@ -15,7 +15,6 @@ ActiveAdmin.register_page "Dashboard" do
             column :venue
             column :start_time
             column :end_time
-            column :ticket_price
           end
         end
       end

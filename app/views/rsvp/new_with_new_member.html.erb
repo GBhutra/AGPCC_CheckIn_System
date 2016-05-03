@@ -1,14 +1,24 @@
-<h1>This is the R.S.V.P. page with a new member for <%= @event.title %></h1>
-<% if flash[:notice] %>
-  <div class="notice"><%= flash[:notice] %></div>
-<% end %>
-<%= form_for(:member, :url => {:action => 'create_with_new_member' ,:controller => 'rsvp' ,:id => @event.id}) do |f| %>  
-<table>
-  <tr><th><%= f.label :first_name %><%= f.text_field(:first_name) %></th></tr>
-  <tr><th><%= f.label :last_name %><%= f.text_field(:last_name) %></th></tr>
-  <tr><th><%= f.label :Email %><%= f.email_field(:email) %></th></tr>
-  <tr><th><%= f.label :Gender %><%= f.text_field(:gender) %></th></tr>
-  <tr><th><%= f.label :classification %><%= f.text_field(:classification) %></th></tr>
-  <tr><th><%= submit_tag ("R.S.V.P.") %></th></tr>
-</table>
-<% end %>
+<div class="container">
+  <h2 class="section-subheading">R.S.V.P to <%= @event.title %></h2>
+  <h1> Welcome to Aggie Graduate &amp; Professional Community Club! </h1>
+  <h3>Hmm.. Looks like you are signing in for the first time. We need some more information!</h3>
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+  <div class="form-box">
+  <%= form_for(:member, :url => {:action => 'create_with_new_member' ,:method => 'POST', :controller => 'rsvp' ,:id => @event.id, :class => 'form-group'}) do |f| %>  
+    <h4> First Name :</h4>
+     <%= f.text_field :first_name, :class=> 'form-control' ,:value => @first_name %>
+    <h4> Last Name :</h4>
+    <%= f.text_field :last_name, :class=> 'form-control' , :value => @last_name %>
+    <h4> Email :</h4>
+    <%= f.email_field :email, :class => 'form-control', :value => @email_id %>
+    <h4> Gender :</h4>
+    <%= f.select(:gender, Member::GENDER, {}, {class: "form-control"}) %>
+    <h4> Classification :</h4>
+    <%= f.select(:classification, Member::CLASSIFICATION, {}, {class: "form-control"}) %>
+    <br>
+    <%= submit_tag "R.S.V.P", :class => "btn btn-lg btn-warning"  %>
+  <% end %>
+  </div>
+</div>

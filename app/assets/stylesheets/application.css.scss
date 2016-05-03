@@ -1,20 +1,30 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
-.body{
+@import 'bootstrap-datetimepicker';
+
+.datepicker.dropdown-menu {
+  background-color:#FFF;
+}
+
+body{
 		font-family: 'Roboto', sans-serif;
 
 }
+
 .pad-adjust {
-    padding-top:85px;
+    padding-top:10px;
 }
 
+h4 {
+    font-family: 'Roboto', sans-serif;
+}
 .section-subheading {
 	background: none repeat scroll 0 0 #460000;
 	color: #fff;
 	display: inline-block;
 	font-family: 'Roboto', sans-serif;
-	font-size: 18px;
+	font-size: 20px;
 	letter-spacing: 1px;
 	margin: 0 0 10px;
 	padding: 10px;
@@ -26,6 +36,7 @@
 .yamm.navbar-default {
 	background-color: #460000;
 	border: none;
+	text-align: center;
 }
 .yamm.navbar-default li.active {
 	background-color: #460000;
@@ -35,12 +46,16 @@
 .dropdown-menu {
 	background: #222222;
 }
+
 .yamm.navbar-default .navbar-nav > li > a {
 	font-family: 'Roboto', sans-serif;
 	color: #fff;
 	font-size: 14px;
 	text-transform: uppercase;
 	transition: all 0.2s ease-in-out 0s;
+	
+
+
 }
 .yamm.navbar-default .navbar-nav > li:hover > a {
 	background-color: #ffffff;
@@ -200,6 +215,180 @@ html .navbar-default .navbar-nav > .active > a, html .navbar-default .navbar-nav
 .yamm .dropdown-menu h5:hover:before {
 	border-color: #460000;
 }
+
+
+//CONTACT FORM
+
+.contactForm-shop {
+	margin-bottom: 40px;
+}
+#contactForm input {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border: 2px solid #fff;
+	font-family: "latolight";
+	font-size: 13px;
+	text-transform: uppercase;
+	height: auto;
+	padding: 10px;
+	margin-bottom: 25px;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out
+}
+#contactForm textarea {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border: 2px solid #fff;
+	font-family: "latolight";
+	font-size: 13px;
+	height: 114px;
+	margin-bottom: 22px;
+	text-transform: uppercase;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out
+}
+#contactForm textarea:focus, #contactForm input:focus {
+	border-color: #460000;
+}
+#contactForm .btn-xl {
+	background: none repeat scroll 0 0 #460000;
+	padding: 10px;
+	text-transform: uppercase;
+	width: 100%;
+	margin-top: -5px;
+	color: #fff !important;
+	border: none;
+}
+#contactForm .form-group {
+	position: relative;
+}
+#contactForm .form-group .help-block {
+	color: #460000;
+	left: 0;
+	line-height: 27px;
+	padding-right: 0;
+	position: absolute;
+	text-align: left;
+	text-indent: 0px;
+	top: 36px;
+	width: 255px;
+}
+#contactForm .form-group .help-block * {
+	color: #460000;
+}
+#contactForm .form-group.form-group-text .help-block {
+	color: #460000;
+	left: 15px;
+	line-height: 27px;
+	padding-right: 20px;
+	position: absolute;
+	text-align: left;
+	text-indent: 0;
+	top: 75px;
+	width: 200px;
+}
+.icon-set-wrap {
+	display: inline-block;
+	float: left;
+	margin-bottom: 5px;
+	width: 100%;
+}
+.icon-set-wrap .icon-set {
+	border: 2px solid #460000;
+	border-radius: 100px;
+	float: left;
+	padding: 10px;
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+}
+.content-icon-set {
+	float: left;
+	padding: 8px 0 15px 15px;
+	width: 200px;
+	text-align: left;
+	font-size: 14px;
+	line-height: 20px;
+}
+.content-icon-set a {
+	padding: 5px 2px;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out
+}
+.content-icon-set a:hover {
+	background: none repeat scroll 0 0 #460000;
+	color: #fff;
+	text-decoration: none !important;
+}
+.cd-form-wrapper .section-heading {
+	font-size: 30px;
+	font-family: 'latolight';
+}
+.cd-form-wrapper .section-heading strong {
+	font-family: 'latoregular';
+}
+.cd-form-wrapper .heading-wrap {
+	margin: 0 auto 40px;
+}
+.map {
+	margin: -20px 0 0 0px;
+}
+.map img {
+	width: 100%;
+	height: auto;
+}
+.iframe {
+	border: medium none;
+	height: 350px;
+	margin: 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+/* GOOGLE MAPS */
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #map {
+    height: 400px;
+  }
+  .controls {
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .pac-container {
+    font-family: Roboto;
+  }
+
+  #type-selector {
+    color: #fff;
+    background-color: #4d90fe;
+    padding: 5px 11px 0px 11px;
+  }
+
+  #type-selector label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+  }
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

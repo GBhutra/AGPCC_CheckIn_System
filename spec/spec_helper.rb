@@ -18,11 +18,16 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require File.expand_path("../../config/environment", __FILE__)
+
+require 'simplecov'
+SimpleCov.start 'rails'
+
 require 'rspec/rails'
 require 'rspec/autorun'
 
 require 'capybara/rails'
 require 'capybara/rspec'
+require "rautomation"
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.

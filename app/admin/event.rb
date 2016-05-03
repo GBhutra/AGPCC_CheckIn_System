@@ -12,7 +12,6 @@ ActiveAdmin.register Event do
         column :venue
         column :start_time
         column :end_time
-        column :ticket_price
         actions
     end
     
@@ -23,15 +22,11 @@ ActiveAdmin.register Event do
         end
         f.inputs "Location Details" do
             f.input :venue, label: "Venue"
-            f.input :longitude, label: "Longitude"
-            f.input :latitude, label: "Latitude"
+            
         end
         f.inputs "Timing Details" do
-            f.input :start_time, label: "Start Time"
-            f.input :end_time, label: "End Time"
-        end
-        f.inputs "Ticket Details" do
-            f.input :ticket_price, label: "Ticket price" 
+            f.input :start_time, as: :date_time_picker, datepicker_options: { min_date: (Date.today).strftime("%Y-%m-%d") , max_date: (Date.today+1000).strftime("%Y-%m-%d"), minTime:'11:00' }
+            f.input :end_time, as: :date_time_picker, datepicker_options: { min_date: (Date.today).strftime("%Y-%m-%d"), max_date: (Date.today+1000).strftime("%Y-%m-%d"), minTime:'11:00' }
         end
         f.actions
     end

@@ -1,0 +1,31 @@
+<head>
+    <script src="/app/assests/javascripts/highcharts.js"></script>
+</head>
+<script>
+    $(function () { 
+    $('#chart').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'CHECKIN vs RSVP'
+        },
+        xAxis: {
+            categories: <%=raw @events.as_json%>
+        },
+        yAxis: {
+            title: {
+                text: 'No.of people'
+            }
+        },
+        series: [{
+            name: 'CHECKIN',
+            data: [2, 1, 4]
+        }, {
+            name: 'RSVP',
+            data: [5, 7, 3]
+        }]
+    });
+});
+</script>
+<div id="chart" style="width:600px; height:500px;margin-left:100px;"></div>
