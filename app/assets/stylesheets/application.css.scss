@@ -6,6 +6,14 @@
 .datepicker.dropdown-menu {
   background-color:#FFF;
 }
+.datepicker{
+    background-color: #fff;
+    color: #000;
+}
+.timepicker{
+    background-color: #fff;
+    color: #000;
+}
 
 body{
 		font-family: 'Roboto', sans-serif;
@@ -388,6 +396,11 @@ html .navbar-default .navbar-nav > .active > a, html .navbar-default .navbar-nav
     font-size: 13px;
     font-weight: 300;
   }
+  
+  
+/* DATE PICKER */
+
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

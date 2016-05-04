@@ -74,4 +74,6 @@ group :development, :test do
   gem 'launchy'
   gem 'simplecov'
   gem 'rautomation'
+  gem 'rails-erd'
+
 end

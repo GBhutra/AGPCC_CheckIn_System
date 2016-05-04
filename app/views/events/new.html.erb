@@ -10,11 +10,10 @@
     <h4> Event Description :</h4>
     <%= f.text_area :description, :class=> 'form-control' %>
     <h4> Venue :</h4>
-    <%= f.text_field :venue, :class=> 'form-control', :id=> 'event_venue', :place_holder=> 'Enter Location' %>
+    <%= f.text_field :venue, :class=> 'form-control', :id=> 'pac-input', :place_holder=> 'Enter Location' %>
     <br><br>
     <body><div id="map"></div></body>
     <br><br>
-
     <h4> Start Time :</h4>
     <div class='input-group date' id='datetimepicker6' data-date-format="yyyy-mm-dd">
       <%= f.datetime_field :start_time, :class=> 'form-control' %>
@@ -41,5 +40,3 @@
 
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlZJtoLux_7E8pIZyJXSZ1lhGZ_2u4pk4&libraries=places&callback=initMap" async defer></script>
-
-
