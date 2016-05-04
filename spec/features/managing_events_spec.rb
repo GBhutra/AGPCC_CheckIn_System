@@ -60,7 +60,6 @@ feature 'Managing events' do
     
     scenario 'editing event with valid details' do
       create_event 
-      
       click_link 'Edit'
       fill_in 'event_title', :with => 'Edited Event'
       fill_in 'event_description', :with => 'This Event was edited from the Admin Interface'

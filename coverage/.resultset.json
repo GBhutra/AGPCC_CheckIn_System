@@ -889,6 +889,116 @@
         1,
         null
       ],
+      "/home/ubuntu/workspace/app/helpers/events_helper.rb": [
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/app/helpers/logins_helper.rb": [
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/app/helpers/application_helper.rb": [
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/app/helpers/analyze_helper.rb": [
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/app/helpers/registration_helper.rb": [
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/app/helpers/rsvp_helper.rb": [
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/app/helpers/check_in_helper.rb": [
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/app/helpers/dashboards_helper.rb": [
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/app/models/rsvp.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/app/models/admin_user.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/app/models/check_in.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/app/models/event.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/app/models/member.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "/home/ubuntu/workspace/app/controllers/application_controller.rb": [
         0,
         0,
@@ -902,7 +1012,7 @@
         0,
         0
       ],
-      "/home/ubuntu/workspace/app/admin/event.rb": [
+      "/home/ubuntu/workspace/app/admin/rsvp.rb": [
         0,
         0,
         0,
@@ -912,7 +1022,9 @@
         0,
         0,
         0,
-        0,
+        0
+      ],
+      "/home/ubuntu/workspace/app/admin/dashboard.rb": [
         0,
         0,
         0,
@@ -1002,7 +1114,17 @@
         0,
         0
       ],
-      "/home/ubuntu/workspace/app/admin/dashboard.rb": [
+      "/home/ubuntu/workspace/app/admin/event.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -1059,130 +1181,8 @@
         0,
         0,
         0
-      ],
-      "/home/ubuntu/workspace/app/admin/rsvp.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/models/event.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/models/admin_user.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/models/check_in.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/models/member.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/models/rsvp.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/helpers/dashboards_helper.rb": [
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/helpers/events_helper.rb": [
-        0,
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/helpers/analyze_helper.rb": [
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/helpers/application_helper.rb": [
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/helpers/check_in_helper.rb": [
-        0,
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/helpers/rsvp_helper.rb": [
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/helpers/logins_helper.rb": [
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/app/helpers/registration_helper.rb": [
-        0,
-        0
       ]
     },
-    "timestamp": 1462330468
+    "timestamp": 1462374165
   }
 }
