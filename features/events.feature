@@ -14,6 +14,7 @@ Given the following events exist:
   | Second Event            | secondevent   | HRBB, College Station, TX    | 2017-05-13T10:00:00.000-0500    | 2017-05-14T10:00:00.000-0500  | 200  |
   | Third Event             | thirdevent    | HRBB, College Station, TX    | 2017-05-15T10:00:00.000-0500    | 2017-05-16T10:00:00.000-0500  | 300  |
 
+
   
 Scenario: viewing First Event Details
   When I login successfully
@@ -46,7 +47,21 @@ Scenario: viewing Third Event Details
   # And I should see start_time "3"
   # And I should see end_time "4"
   # And I should see ticket_price "5"
-  
+
+Scenario: As an Admin Create a New member
+  When I login successfully
+  Then I should be on Dashboard
+  When I follow Members
+  Then I should be on Members
+  When I follow New Member
+  Then I should be on New Member
+  When I fill in member[first_name] with Test
+  And I fill in member[last_name] with Test
+  And I fill in member[email] with test@test.com
+  And I select in member[gender] with Male
+  And I select in member[classification] with Master
+  And I press "Create Member"
+  Then I should get the message Member was successfully created.
 
 Scenario: create new event
   When I login successfully
@@ -58,7 +73,8 @@ Scenario: create new event
   When I fill in event[title] with Event_One
   And I fill in event[description] with fakedescription
   And I fill in event[venue] with fakelocation
-  And 
+  And I fill in start_time with 2016-04-11T10:00:00.000-0500 
+  And I select in end_time with 2017-04-11T10:00:00.000-0500
   And I press "Create Event"
   Then I should get the message Event was successfully created
   
@@ -72,9 +88,7 @@ Scenario: Updating an Event
   Then I should be on Edit Event
   When I fill in event[title] with Event_two
   And I fill in event[description] with fakedescription2
-  And I fill in event[venue] with fakelocation2
-  And I fill in event[longitude] with -50.0000000
-  And I fill in event[latitude] with 20.0000000
+  And I fill in event[venue] with fakelocation
   And I select in start_time(1i) with 2017
   And I select in start_time(2i) with April
   And I select in start_time(3i) with 10
@@ -112,6 +126,7 @@ Scenario: CheckIn
   When I am on Check In page
   And I fill in member[email] with aman@gmail.com
   And I press "Check In"
+  Then I should get the message Email error please enter valid details!
   Then I should be on Looks like you are checking in for the first time
   When I fill in member[first_name] with Amandeep
   And I fill in member[last_name] with Bhal
@@ -124,3 +139,30 @@ Scenario: CheckIn
   And I fill in member[email] with amandeep@gmail.com
   And I press "Check In"
   Then I should get the message Check in Successful
+
+
+#Feature: Managing Members
+  
+#  As an admin
+#  So that I can see members
+#  I want to click to the email to member and want to see members details 
+  
+#Background: members have been added to database
+  
+#Given the following members exist:
+  
+#  | first_name | last_name  | email             | gender | classification | id  | 
+#  | test1      | test1      | test1@example.com | male   | Master         | 150 |
+#  | test2      | test2      | test2@example.com | female | Ph.D.          | 250 |
+  
+Scenario: Check in Member as an Admin
+  When I login successfully
+  Then I should be on Dashboard
+  When I follow Check Ins
+  Then I should be on Check Ins
+  When I follow New Check In
+  Then I should be on New Check In
+  When I select in Member with test1@example.com
+  And I select in Event with First Event
+  And I press "Create Check in"
+  Then I should get the message Check in was successfully created.

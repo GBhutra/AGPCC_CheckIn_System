@@ -7,6 +7,14 @@ Event.create!(event)
 # you should arrange to add that event to the database here.
 end
 end
+
+Given /^the following members exist:$/ do |members_table|
+  members_table.hashes.each do |member|
+Member.create!(member)
+end
+end
+
+
 Then /I should see title "([^"]*)"/ do |arg|
 page.should have_content arg
 end

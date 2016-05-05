@@ -34,6 +34,18 @@ module NavigationHelpers
     when /^Edit Event/
       '100/edit'
       
+    when /^Check Ins/
+      'admin/check_ins'
+      
+    when/^New Check In/
+      'check_ins/new'
+      
+    when/^Members/
+      'admin/members'
+      
+    when/^New Member/
+      'members/new'
+    
     when /^Check In/
       'check_in/100/new'
       
@@ -42,6 +54,9 @@ module NavigationHelpers
     
     when /^AGPCC Admin Login/
       'admin/login'
+      
+  
+      
 # added later                                 # This needs to change
 #    when /^Online Checkin/
 #      '/#'
