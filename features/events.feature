@@ -62,6 +62,19 @@ Scenario: As an Admin Create a New member
   And I select in member[classification] with Master
   And I press "Create Member"
   Then I should get the message Member was successfully created.
+  
+Scenario: As an Admin Create an other Admin
+  When I login successfully
+  Then I should be on Dashboard
+  When I follow Admin Users
+  Then I should be on Admin Users
+  When I follow New Admin User
+  Then I should be on New Admin User
+  When I fill in admin_user[email] with test@admin.com
+  And I fill in admin_user[password] with 123456789
+  And I fill in admin_user[password_confirmation] with 123456789
+  And I press "Create Admin user"
+  Then I should get the message Admin user was successfully created.
 
 Scenario: create new event
   When I login successfully

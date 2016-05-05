@@ -45,6 +45,13 @@ module NavigationHelpers
       
     when/^New Member/
       'members/new'
+      
+    when/^Admin Users/
+      'admin/admin_users'
+    
+    when/^New Admin User/
+      'admin_users/new'
+    
     
     when /^Check In/
       'check_in/100/new'
