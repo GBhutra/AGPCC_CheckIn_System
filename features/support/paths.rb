@@ -52,6 +52,15 @@ module NavigationHelpers
     when/^New Admin User/
       'admin_users/new'
     
+     when /^Edit/
+     'admin_users/125/edit'
+     
+     
+    when /^Rsvps/
+      'admin/rsvps'
+      
+    when /^New Rsvp/
+      'rsvps/new'
     
     when /^Check In/
       'check_in/100/new'

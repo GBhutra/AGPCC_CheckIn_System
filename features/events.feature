@@ -14,8 +14,6 @@ Given the following events exist:
   | Second Event            | secondevent   | HRBB, College Station, TX    | 2017-05-13T10:00:00.000-0500    | 2017-05-14T10:00:00.000-0500  | 200  |
   | Third Event             | thirdevent    | HRBB, College Station, TX    | 2017-05-15T10:00:00.000-0500    | 2017-05-16T10:00:00.000-0500  | 300  |
 
-
-  
 Scenario: viewing First Event Details
   When I login successfully
   Then I should be on Dashboard
@@ -179,3 +177,41 @@ Scenario: Check in Member as an Admin
   And I select in Event with First Event
   And I press "Create Check in"
   Then I should get the message Check in was successfully created.
+  
+  Scenario: RSVP Member as an Admin
+  When I login successfully
+  Then I should be on Dashboard
+  When I follow Rsvps
+  Then I should be on Rsvps
+  When I follow New Rsvp
+  Then I should be on New Rsvp
+  When I select in Member with test2@example.com
+  And I select in Event with Second Event
+  And I press "Create Rsvp"
+  Then I should get the message Rsvp was successfully created.
+  
+#Feature: Managing Admins
+  
+#  As an admin
+#  So that I can see Admins
+#  I want to change the admin password 
+  
+#Background: admins have been added to database
+  
+#Given the following members exist:
+  
+#  | admin_user_email      | admin_user_password  | admin_user_password_confirmation | id  | 
+#  | admin1@example.com    | 12345678             | 12345678                         | 125 |
+#  | admin2@example.com    | 87654321             | 87654321                         | 225 |
+  
+  
+Scenario: Edit Admin
+  When I login successfully
+  Then I should be on Dashboard
+  When I follow Admin Users
+  Then I should be on Admin Users
+  When I follow Edit
+  Then I should be on Edit Admin User
+  When I fill in admin_user[email] with admin@example.com
+  And I fill in admin_user[password] with password
+  And I fill in admin_user[password_confirmation] with password
